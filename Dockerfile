@@ -18,4 +18,5 @@ RUN apt-get install -y nodejs \
     && apt-get clean -y
 
 # 安装puppeteer, 需要打开全局翻墙!
-RUN cd /app/docker/ && npm install
+ADD package.json package-lock.json /
+RUN npm install
